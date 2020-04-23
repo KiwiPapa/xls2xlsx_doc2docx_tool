@@ -26,14 +26,17 @@ for fileName in os.listdir('.\\#转换'):
 Goal_dir = Change(".\\#转换")
 Goal_dir.doc2docx()
 Goal_dir.xls2xlsx()
+Goal_dir.ppt2pptx()
 
 for fileName in os.listdir('.\\备份'):
     if '工具' not in fileName:
         if 'xls' in fileName or 'xlsx' in fileName or 'doc' in fileName or 'docx' in fileName:
             shutil.copy('.\\备份\\' + fileName, '.\\#转换')
+            pass
 
 isExists = os.path.exists('.\\备份')
 if isExists:
     shutil.rmtree('.\\备份')
 
 input('转换成功')
+

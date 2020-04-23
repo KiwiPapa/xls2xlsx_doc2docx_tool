@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../tables_add_together/.idea/tables_add_together.iml" filepath="$PROJECT_DIR$/../tables_add_together/.idea/tables_add_together.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/xls2xlsx_doc2docx_tool.iml" filepath="$PROJECT_DIR$/.idea/xls2xlsx_doc2docx_tool.iml" />
     </modules>
   </component>
