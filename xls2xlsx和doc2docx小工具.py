@@ -27,3 +27,5 @@ Goal_dir = Change(".\\1转换")
 Goal_dir.doc2docx()
 Goal_dir.xls2xlsx()
 
+input('转换成功')
+
