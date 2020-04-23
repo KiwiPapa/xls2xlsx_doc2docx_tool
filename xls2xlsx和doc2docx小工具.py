@@ -15,17 +15,25 @@ def mkdir(path):
         print(path + ' 目录已存在')
         return False
 
-mkdir('.\\2备份')
-for fileName in os.listdir('.\\1转换'):
+mkdir('.\\备份')
+for fileName in os.listdir('.\\#转换'):
     if '工具' not in fileName:
         if 'xls' in fileName or 'xlsx' in fileName or 'doc' in fileName or 'docx' in fileName:
-            shutil.copy('.\\1转换\\' + fileName, '.\\2备份')
+            shutil.copy('.\\#转换\\' + fileName, '.\\备份')
             pass
 
 #转换文件，可能转出的文件读写空值，那么还得利用WPS或者LIBRE OFFICE
-Goal_dir = Change(".\\1转换")
+Goal_dir = Change(".\\#转换")
 Goal_dir.doc2docx()
 Goal_dir.xls2xlsx()
 
-input('转换成功')
+for fileName in os.listdir('.\\备份'):
+    if '工具' not in fileName:
+        if 'xls' in fileName or 'xlsx' in fileName or 'doc' in fileName or 'docx' in fileName:
+            shutil.copy('.\\备份\\' + fileName, '.\\#转换')
 
+isExists = os.path.exists('.\\备份')
+if isExists:
+    shutil.rmtree('.\\备份')
+
+input('转换成功')
